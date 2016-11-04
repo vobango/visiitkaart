@@ -7,6 +7,13 @@
 			body{
 				background-color: #ccc;
 			}
+			.wrapper{
+				width: 9cm;
+				height: 5cm;
+				margin: auto;
+				position: absolute;
+				top: 0; left: 0; bottom: 0; right: 0;
+			}
 			.cardbox{
 				width: 9cm;
 				height: 5cm;
@@ -14,17 +21,46 @@
 				position: absolute;
 				top: 0; left: 0; bottom: 0; right: 0;
 				background-color: #edf;
-				box-shadow: -5px 5px 12px 0px rgba(0,0,0,0.5);
+				box-shadow: 0px 15px 10px -10px rgba(0,0,0,0.5);
+				border: solid 1px #555;
+				transition: transform 250ms ease-in-out, box-shadow 250ms ease-in-out;
+			}
+			.wrapper:hover .cardbox{
+				box-shadow: 0px 40px 15px -20px rgba(0,0,0,0.35);
+				transform: translate(0px, -15px);
+				cursor: pointer;
+			}
+			#name{
+				font-size: 24pt;
+				font-family: serif;
+				text-align: center;
+				margin-top: 14mm;
+				margin-bottom: 2mm;
+			}
+			#job{
+				font-size: 12pt;
+				font-family: serif;
+				text-align: center;
+				margin-top: 0mm;
+				margin-bottom: 4mm;
+			}
+			#contact{
+				font-size: 8pt;
+				font-family: sans-serif;
+				text-align: right;
+				padding: 0px 10px 0px 0px;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="cardbox">
-			<p id="name">Kaspar Arme</p>
-			<p id="job">programmeerija</p>
-			<p id="contact">kaspar.arme@gmail.com<br />
-				+372 5555 6666<br />
-				<i class="fa fa-skype" aria-hidden="true"></i> vobango<br />
-				<a href=#>github.com/vobango</a>
+		<div class="wrapper">
+		  <div class="cardbox">
+			  <p id="name">Kaspar Arme</p>
+			  <p id="job">programmeerija</p>
+			  <p id="contact">kaspar.arme@gmail.com<br />
+				  +372 5555 6666<br />
+				  <i class="fa fa-skype" aria-hidden="true"></i> vobango<br />
+				  <a href=#>github.com/vobango</a>
+		  </div>
 		</div>
 	</body>
