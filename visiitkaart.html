@@ -3,9 +3,35 @@
 	<head>
 		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
 		<script src="https://use.fontawesome.com/c9cd2fb52c.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 		<style>
 			body{
-				background-color: #ccc;
+				background-color: #ddd;
+				border: solid 4mm #eee;
+				border-bottom: solid 5mm #eee;
+				border-top: solid 5mm #eee;
+				margin: 0;
+			}
+			/*.wrapper{
+				width: 9cm;
+				height: 5cm;
+				margin: auto;
+				position: absolute;
+				top: 0; left: 0; bottom: 0; right: 0;
+			}*/
+			.sign{
+				width: 4.5cm;
+				height: 7mm;
+				margin: auto;
+				margin-top: 5mm;
+				background-color: #fff;
+				box-shadow: 0px 12px 6px -10px rgba(0,0,0,0.5);
+				text-align: center;
+				font-family: "Source Sans Pro", sans-serif;
+				font-size: 14pt;
+				font-weight: bold;
+				border: solid 1px #555;
+				transition: transform 250ms ease-in-out, box-shadow 250ms ease-in-out;
 			}
 			.cardbox{
 				width: 9cm;
@@ -13,37 +39,86 @@
 				margin: auto;
 				position: absolute;
 				top: 0; left: 0; bottom: 0; right: 0;
-				background-color: #edf;
-				box-shadow: -5px 5px 12px 0px rgba(0,0,0,0.5);
+				background-color: #fff;
+				box-shadow: 0px 15px 10px -10px rgba(0,0,0,0.5);
 				border: solid 1px #555;
-				
+				//transition: transform 250ms ease-in-out, box-shadow 250ms ease-in-out;
+			}
+			.sign:hover{
+				box-shadow: 0px 15px 10px -11px rgba(0,0,0,0.3);
+				transform: translate(0px, -5px);
 			}
 			#name{
-				font-size: 21pt;
+				font-size: 28pt;
+				font-family: serif;
 				text-align: center;
-				margin-top: 15mm;
-				margin-bottom: 2mm;
+				//text-transform: uppercase;
+				margin-top: 12mm;
+				margin-bottom: 1mm;
 			}
 			#job{
-				font-size: 12pt;
+				font-size: 11pt;
+				font-family: serif;
 				text-align: center;
 				margin-top: 0mm;
-				margin-bottom: 4mm;
+				margin-bottom: 3mm;
 			}
 			#contact{
-				font-size: 8pt;
+				font-size: 9pt;
+				font-family: "Source Sans Pro", sans-serif;
 				text-align: right;
+				margin-top: 0;
 				padding: 0px 10px 0px 0px;
 			}
+			a{
+				text-decoration: none;
+			}
+			a:link{
+				color: #000;
+			}
+			a:visited{
+				color: #000;
+			}
+			a:hover{
+				text-decoration: underline;
+			}
+			#redirect:hover{
+				text-decoration: none;
+			}
+			@media only screen and (max-width: 415px){
+				.sign:hover{
+					box-shadow: 0px 12px 6px -10px rgba(0,0,0,0.5);
+					transform: none;
+				}
+				.cardbox{
+					width: 98%;
+				}
+				body{
+					border-style: none;
+				}
+			}
+			@media only screen and (min-height: 200px) and (max-height: 500px){
+				body{
+					border-style: none;
+				}
+				.sign:hover{
+					box-shadow: 0px 12px 6px -10px rgba(0,0,0,0.5);
+					transform: none;
+				}
+			}
 		</style>
+		<title>Kontakt</title>
 	</head>
 	<body>
-		<div class="cardbox">
-			<p id="name">Kaspar Arme</p>
-			<p id="job">programmeerija</p>
-			<p id="contact">kaspar.arme@gmail.com<br />
-				+372 5555 6666<br />
-				<i class="fa fa-skype" aria-hidden="true"></i> vobango<br />
-				<a href=#>github.com/vobango</a>
+		<div class="wrapper">
+			<div class="cardbox">
+			  <p id="name">Kaspar Arme</p>
+			  <p id="job">programmer</p>
+			  <p id="contact"><i class="fa fa-envelope-o" aria-hidden="true"></i> &nbsp;<a href="mailto:kaspar.arme@gmail.com">kaspar.arme@gmail.com</a><br />
+				  <i class="fa fa-phone" aria-hidden="true"></i><a href="tel://372XXXXXXXX"> +372 5555 6666<br /></a>
+				  <i class="fa fa-skype" aria-hidden="true"></i><a href="skype:vobango?userinfo"> vobango<br /></a>
+				  <i class="fa fa-github" aria-hidden:="true"></i> <a href=https://github.com/vobango target="_blank">Github</a>
+		  </div>
 		</div>
+		<a href=# id="redirect"><div class="sign">Continue to site <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></div></a>
 	</body>
